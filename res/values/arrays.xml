@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bookmark_list">
+        <item >书签1</item>
+        <item >书签2</item>
+        <item >书签3</item>
+        <item >书签4</item>
+    </string-array>
+
+    
+</resources>

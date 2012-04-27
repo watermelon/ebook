@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, EbookActivity!</string>
+    <string name="app_name">Ebook</string>
+    <string name="bookmark">书签</string>
+    <string name="save_bookmark">保存</string>
+    <string name="load_bookmark">打开</string>
+
+</resources>

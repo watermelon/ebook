@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/main_tab_banner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:padding="8dip"
+            android:text="返回" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Ebook"
+            android:textColor="#000000"
+            android:textSize="18dip" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:padding="8dip"
+            android:text="前进" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/main_tab"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_foot"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TabHost
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/main_tab2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0" />
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.0"
+                    android:visibility="gone" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bg_footbar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radio_button1"
+                        style="@style/tab_style"
+                        android:layout_marginTop="2.0dip"
+                        android:drawableTop="@drawable/ico_zy01"
+                        android:text="主页" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button2"
+                        style="@style/tab_style"
+                        android:layout_marginTop="2.0dip"
+                        android:drawableTop="@drawable/ico_dp01"
+                        android:text="地盘" />
+
+                    <RadioButton
+                        android:id="@+id/bookmark"
+                        style="@style/tab_style"
+                        android:layout_marginTop="2.0dip"
+                        android:drawableTop="@drawable/ico_tt01"
+                        android:text="书签" />
+
+                    <RadioButton
+                        android:id="@+id/radio_next"
+                        style="@style/tab_style"
+                        android:layout_marginTop="2.0dip"
+                        android:drawableTop="@drawable/ico_gd01"
+                        android:text="下一页" />
+                </RadioGroup>
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_tab_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/main_tab"
+        android:layout_below="@id/main_tab_banner"
+        android:background="#FFFFEf" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/storm"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:paddingLeft="130dp"
+                android:src="@drawable/storm" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#000000"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/listfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1.74"
+                    android:background="@drawable/shelf_bkg" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
